@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>递归的递与归 | 汪元会的小窝</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="我的个人博客网站">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.eb5f38e4.css" as="style"><link rel="preload" href="/assets/js/app.bb5ea6c5.js" as="script"><link rel="preload" href="/assets/js/3.3b3c5143.js" as="script"><link rel="preload" href="/assets/js/1.a6ea1bc9.js" as="script"><link rel="preload" href="/assets/js/7.e52072c5.js" as="script"><link rel="prefetch" href="/assets/js/10.82f26a94.js"><link rel="prefetch" href="/assets/js/11.3f7c8e28.js"><link rel="prefetch" href="/assets/js/12.7f29abef.js"><link rel="prefetch" href="/assets/js/13.16089130.js"><link rel="prefetch" href="/assets/js/14.63033f0b.js"><link rel="prefetch" href="/assets/js/15.ecd0ee55.js"><link rel="prefetch" href="/assets/js/16.e8796c30.js"><link rel="prefetch" href="/assets/js/4.60344e19.js"><link rel="prefetch" href="/assets/js/5.2ae1dbe6.js"><link rel="prefetch" href="/assets/js/6.158d86a8.js"><link rel="prefetch" href="/assets/js/8.6210577f.js"><link rel="prefetch" href="/assets/js/9.00e61d02.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.eb5f38e4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>汪元会的小窝</h3> <p class="description" data-v-59e6cb88>我的个人博客网站</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>汪元会</span>
+          
+        <span data-v-59e6cb88>2017 - </span>
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpg" alt="汪元会的小窝" class="logo"> <span class="site-name">汪元会的小窝</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/博客文章/" class="nav-link"><i class="undefined"></i>
+  博客文章
+</a></li><li class="dropdown-item"><!----> <a href="/categories/项目效果/" class="nav-link"><i class="undefined"></i>
+  项目效果
+</a></li><li class="dropdown-item"><!----> <a href="/categories/网站收藏/" class="nav-link"><i class="undefined"></i>
+  网站收藏
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/huige9999" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/avatar.jpg" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    汪元会
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>6</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>5</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/博客文章/" class="nav-link"><i class="undefined"></i>
+  博客文章
+</a></li><li class="dropdown-item"><!----> <a href="/categories/项目效果/" class="nav-link"><i class="undefined"></i>
+  项目效果
+</a></li><li class="dropdown-item"><!----> <a href="/categories/网站收藏/" class="nav-link"><i class="undefined"></i>
+  网站收藏
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/huige9999" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>递归的递与归</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>汪元会</span>
+          
+        <span data-v-59e6cb88>2017 - </span>
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">递归的递与归</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>汪元会</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>7/7/2024</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>程序思维</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="铺垫"><a href="#铺垫" class="header-anchor">#</a> 铺垫</h2> <p>在聊递归前我们先来聊下函数做个铺垫</p> <h3 id="_1-函数-任务的切割"><a href="#_1-函数-任务的切割" class="header-anchor">#</a> 1. 函数——任务的切割</h3> <ul><li>没有函数的情况
+主角(程序)从上到下按部就班的完成主线任务
+<img src="/assets/img/7.61cdd4de.png" alt="example"></li> <li>有函数的情况
+主角(程序)在主线任务执行的中途，要去完成副本任务才能接着往下做主线任务
+<img src="/assets/img/8.60426ccc.png" alt="example"></li></ul> <h3 id="_2-函数-数据的传递"><a href="#_2-函数-数据的传递" class="header-anchor">#</a> 2. 函数——数据的传递</h3> <p><em>输入(函数参数)与输出(函数返回值)</em></p> <p>主角(程序)从主线任务前往副本任务的时候 不是空手的，会带一些装备(函数参数)过去；
+完成副本任务后 会带一些战利品(函数返回值) 再回到主线任务接着干。</p> <h2 id="什么是递归"><a href="#什么是递归" class="header-anchor">#</a> 什么是递归？</h2> <p>关于递归的概念网上有大把专业的介绍，这里不做赘述。
+下面我用“另类”的说法(给你们讲个故事)尝试介绍下递归：</p> <p><strong>a) 这次主角要完成一个奇葩的主线任务：这个主线任务中的副本任务内容和主线任务一模一样！</strong> <img src="/assets/img/9.308d0863.png" alt="example"></p> <p><strong>b) 根据前面铺垫（函数——任务的切割）我们知道：这个主线任务是被切割的，切割的位置是个分界点（传送门）</strong></p> <p><strong>c) 分界点前面的任务我们的主角已经完成了，分界点下面的任务暂时不干，先穿越打副本。</strong></p> <p><strong>d) 那主角要一直不断穿越下去吗？根据前面的铺垫（函数——数据的传递）我们知道: 主角不是空手穿越的，他是带着装备的、是要干活的(不是光穿越不干活)，因此我们的主角怀揣着这样的信念：终点(递归出口)一定就在前方，于是不断地穿越不断地执行干活；如果其实前方根本就没有终点，我们可怜的主角就会带着他美好的信念过劳而死(调用栈溢出)</strong></p> <p><strong>e) 主角在最后一个副本任务完成后(到达终点)，带着他的战利品往回赶（函数——数据的传递），往回赶的过程中还要继续完成分割线的下半部分任务，这个过程中，手中的战利品也会发生变化：可能变得更多，可能发生了磨损</strong></p> <p><strong>f) 最终带着战利品来到了主环境完成剩下的任务，至此终于完成了主线任务</strong></p> <h2 id="递归的递与归"><a href="#递归的递与归" class="header-anchor">#</a> 递归的递与归</h2> <p><strong>a) 将递归任务环境拆分成：“递世界”、“传送门”、“归世界任务”</strong> <img src="/assets/img/10.dc07a0a6.png" alt="example"> <strong>b) 递的过程是正向的，归的过程是逆向的</strong> <img src="/assets/img/11.ccd3a92a.png" alt="example"> <strong>c) 正向数据传递：传参，逆向数据传递：返回结果</strong> <img src="/assets/img/12.0be2d3d2.png" alt="example"> <strong>d) 递归核心：原子任务(需要重复被执行的任务)</strong>
+我们的主角在递与归的过程中 做着“相似”的任务而不是“相同”的任务，我们将这个任务称之为：原子任务。
+为啥是“相似”，而不是“相同呢”？因为“数据的传递” 导致 主角每次执行“原子任务”的时候 带的装备或战利品都不一样！
+<strong>e) 递归任务的分类(根据结构分类)</strong> <img src="/assets/img/13.387d39cd.png" alt="example"></p> <ul><li><p>原子任务放在递世界
+这种递归比较简单，因为它是个正向的过程。
+<em>比如：遍历算法，我在递世界里就能获取到每一项的值，到了终点后原路返回(这一过程通常不需要再干其他任务)</em></p></li> <li><p>原子任务放在归世界
+这里又分成两种情况：
+<img src="/assets/img/14.d248f256.png" alt="example"></p></li></ul> <p>先说第二种：不依赖上一次任务的数据传递，这一种也比较简单，因为没有涉及到依赖数据的计算
+比如：链表的逆置，先到达递归终点拿到尾节点(逆置后为根节点)，然后将尾节点原封不动的在归世界传递。
+说明：关于链表的逆置的原子操作 这里不作赘述，大家可以查相关代码，这里只交代下：它的原子操作是放在归世界的。</p> <p>再来说第一种：依赖上一次任务的数据传递
+<em>比如：斐波那契数列、简单的快速排序算法，这种递归是最难的，因为它包括了：逆向、逆向过程中依赖数据的累计计算，如下图：</em> <img src="/assets/img/15.3ce7526e.png" alt="example">
+主角在归世界的起点拿到了 A，然后往回走计算出 A+B，依次类推。。。简单概括就是：将上一次的结果(A)参与本次的运算得到新的结果(A+B)</p> <h2 id="如何驯服-递归"><a href="#如何驯服-递归" class="header-anchor">#</a> 如何驯服&quot;递归&quot;？</h2> <p>拿到一个问题，有没有一般性的解决思路？
+我这里作个额外总结给大家参考：
+<img src="/assets/img/16.16731116.png" alt="example">
+主要看主技能：1、分析问题 2、转化问题 3、实在不会就放弃(不要钻牛角尖)</p> <p><strong>分析转化递归问题：</strong></p> <ul><li><p>原子操作是啥？
+这一步是最难的，因为要找出问题的一般性解决规律，需要用到数学归纳法来推导，如果问题比较难可以先放一放。</p></li> <li><p>原子操作放在递世界还是归世界
+如果正向的过程就能得到结果就放在递世界，比如遍历操作，我在正向的过程就能拿到被遍历的每一项；
+其他情况放归世界；</p> <p>放在归世界的原子操作如果还依赖上一次的计算结果，这种情况我们上面说过比较复杂，那我们就用“见微知著”的方式：</p> <p>从“递的终点，归的起点”(作为逆向调用的第一步)开始分析，倒数第二步在拿到起点的数据后（倒数第二步的切割处）做了啥操作？然后执行倒数第二步的归世界代码又做了啥？依次类推出：最终回到主线任务的切割处会得到啥样的数据。</p></li></ul></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/7/2024, 1:41:25 PM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/blogs/blog/2.html#铺垫" class="sidebar-link reco-side-铺垫" data-v-b57cc07c>铺垫</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/blog/2.html#_1-函数-任务的切割" class="sidebar-link reco-side-_1-函数-任务的切割" data-v-b57cc07c>1. 函数——任务的切割</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/blog/2.html#_2-函数-数据的传递" class="sidebar-link reco-side-_2-函数-数据的传递" data-v-b57cc07c>2. 函数——数据的传递</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/blog/2.html#什么是递归" class="sidebar-link reco-side-什么是递归" data-v-b57cc07c>什么是递归？</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/blog/2.html#递归的递与归" class="sidebar-link reco-side-递归的递与归" data-v-b57cc07c>递归的递与归</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/blog/2.html#如何驯服-递归" class="sidebar-link reco-side-如何驯服-递归" data-v-b57cc07c>如何驯服&quot;递归&quot;？</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.bb5ea6c5.js" defer></script><script src="/assets/js/3.3b3c5143.js" defer></script><script src="/assets/js/1.a6ea1bc9.js" defer></script><script src="/assets/js/7.e52072c5.js" defer></script>
+  </body>
+</html>
