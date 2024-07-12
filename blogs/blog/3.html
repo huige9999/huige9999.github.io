@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>pinia defineStore和storeToRefs原理 | 汪元会的小窝</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="我的个人博客网站">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.eb5f38e4.css" as="style"><link rel="preload" href="/assets/js/app.afb0ad1b.js" as="script"><link rel="preload" href="/assets/js/3.56fde116.js" as="script"><link rel="preload" href="/assets/js/1.a6ea1bc9.js" as="script"><link rel="preload" href="/assets/js/14.d7ded7c5.js" as="script"><link rel="prefetch" href="/assets/js/10.cc50bf59.js"><link rel="prefetch" href="/assets/js/11.3958a562.js"><link rel="prefetch" href="/assets/js/12.028e39c7.js"><link rel="prefetch" href="/assets/js/13.77ebe6b2.js"><link rel="prefetch" href="/assets/js/15.98944fe9.js"><link rel="prefetch" href="/assets/js/16.782e1358.js"><link rel="prefetch" href="/assets/js/4.acf37183.js"><link rel="prefetch" href="/assets/js/5.54867437.js"><link rel="prefetch" href="/assets/js/6.9beb5c74.js"><link rel="prefetch" href="/assets/js/7.de2a9afe.js"><link rel="prefetch" href="/assets/js/8.e34dab2b.js"><link rel="prefetch" href="/assets/js/9.06d9f029.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.eb5f38e4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>汪元会的小窝</h3> <p class="description" data-v-59e6cb88>我的个人博客网站</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>汪元会</span>
+          
+        <span data-v-59e6cb88>2017 - </span>
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpg" alt="汪元会的小窝" class="logo"> <span class="site-name">汪元会的小窝</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/博客文章/" class="nav-link"><i class="undefined"></i>
+  博客文章
+</a></li><li class="dropdown-item"><!----> <a href="/categories/网站收藏/" class="nav-link"><i class="undefined"></i>
+  网站收藏
+</a></li><li class="dropdown-item"><!----> <a href="/categories/项目效果/" class="nav-link"><i class="undefined"></i>
+  项目效果
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/huige9999" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/avatar.jpg" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    汪元会
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>6</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>4</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/博客文章/" class="nav-link"><i class="undefined"></i>
+  博客文章
+</a></li><li class="dropdown-item"><!----> <a href="/categories/网站收藏/" class="nav-link"><i class="undefined"></i>
+  网站收藏
+</a></li><li class="dropdown-item"><!----> <a href="/categories/项目效果/" class="nav-link"><i class="undefined"></i>
+  项目效果
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/huige9999" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>pinia defineStore和storeToRefs原理</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>汪元会</span>
+          
+        <span data-v-59e6cb88>2017 - </span>
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">pinia defineStore和storeToRefs原理</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>汪元会</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>7/12/2024</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>Vue3</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="definestore-方法"><a href="#definestore-方法" class="header-anchor">#</a> defineStore 方法</h2> <h3 id="_1、调用方式"><a href="#_1、调用方式" class="header-anchor">#</a> 1、调用方式</h3> <p>defineStore 方法支持两种风格的调用: 选项式和组合式</p> <p><em>选项式: 用配置对象的方式调用</em> <em>组合式：通过 ref、reactive、computed 等来定义数据，普通方法来操作数据的方式调用</em></p> <ul><li>选项式：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>export const useCounterStore = defineStore('counter', {
+    state: () =&gt; ({ count: 0 }),
+    getters: {
+        doubleCount: state =&gt; state.count * 2
+    },
+    actions: {
+        increment() {
+            this.count++
+        }
+    }
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p><em>上面的 id(counter)，也可以是现在配置对象中</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>defineStore({
+    id: 'counter'
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>组合式</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>const useCounterStore = defineStore('counter', () =&gt; {
+    const count = ref(0);
+    const doubleCount = computed(() =&gt; count.value * 2);
+    const increment = () =&gt; count.value++;
+    return {
+        count,
+        doubleCount,
+        increment
+    }
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="_2、源码分析"><a href="#_2、源码分析" class="header-anchor">#</a> 2、源码分析</h3> <p><img src="/assets/img/17.8918baed.png" alt="example"></p> <p>根据上面图片的分析我们知道 if...else...的核心逻辑就是得到 id 和 options，具体的实现逻辑我用伪代码描述下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>   if (idOrOptions是个字符串) {
+        // 进入此if说明第一个参数是仓库id
+        id = idOrOptions;
+
+        options = isSetupStore ? setupOptions : setup;
+        if(isSetupStore) {
+            // 进入此if说明是组合式调用，配置对象取第三个参数(因为第二个参数是个函数嘛！)
+            options = 第三个参数；
+        } else {
+            // 进入此分支说明是选项式调用，配置对象取第二个参数
+            options = 第二个参数
+        }
+    }
+    else {
+        // 进入此if说明第一个参数是配置对象，显然是选项式调用
+        options = idOrOptions;
+        // id必定在配置对象里
+        id = idOrOptions.id;
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>继续往下看,会创建一个 useStore 函数返回给调用者，该函数内部会返回某个 id 的 store</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function defineStore(idOrOptions, setup, setupOptions) {
+  let id;
+  let options;
+  // 计算出id、options的值....
+
+  function useStore(pinia) {
+    // pinia即pinia的实例，pinia实例用来管理所有的store(对store的增删改查)
+    // 创建pinia实例然后挂载到Vue实例上
+    // 如果没有挂在过(激活)的pinia实例，该方法内部会抛出异常
+
+    // 判断pinia是否有效激活
+    const store = pinia._s.get(id);
+    if (!store) {
+      // 根据前面的options创建store实例
+      if (isSetupStore) {
+        // 如果是组合式风格，调用的是 createSetupStore
+        createSetupStore(id, setup, options, pinia);
+      } else {
+        // 如果是选项式风格，调用的是 createOptionsStore
+        // createOptionsStore 方法背后实际上也是在调用 createSetupStore，内部会创建一个名为 setup 的函数
+        // 将选项转为 setup 函数内部的项目，然后调用 createSetupStore 方法，将 setup 函数作为第二个参数传递过去
+        // 因此理论上来讲，setup 实践上要更加高效一些，因为 option store 背后也是转为 setup
+        createOptionsStore(id, options, pinia);
+      }
+    }
+
+    return store;
+  }
+  useStore.$id = id;
+  return useStore;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h2 id="storetorefs-方法"><a href="#storetorefs-方法" class="header-anchor">#</a> storeToRefs 方法</h2> <h3 id="_1、调用方式-2"><a href="#_1、调用方式-2" class="header-anchor">#</a> 1、调用方式</h3> <p>对数据解构的时候，我们会给 store 包一层 storeToRefs 方法，这样可以保证解构出来的数据是响应式的!</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">setup</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> storeToRefs <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;pinia&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useCounterStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> doubleCount <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">storeToRefs</span><span class="token punctuation">(</span>store<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> increment <span class="token punctuation">}</span> <span class="token operator">=</span> store<span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="_2、源码分析-2"><a href="#_2、源码分析-2" class="header-anchor">#</a> 2、源码分析</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>function storeToRefs(store) {
+    // toRaw是为了方式store本身就是个响应式数据，我要确保拿到的是一个非响应式的原始值
+    store = toRaw(store)
+    // 创建了一个空对象
+        const refs = {};
+        // 遍历仓库对象
+        for (const key in store) {
+            // 拿到仓库对象对应的每一项的值
+            const value = store[key];
+            if(value不是响应式) {
+                refs[key] = toRef(store,key)
+            } else {
+                refs[key] = value
+            }
+        }
+        // 整个 for 循环完了之后，所有响应式的值被添加到了 refs 对象上面
+        // 向外部返回这个 refs 对象
+        return refs;
+
+}
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>概括下storeToRefs的作用就是遍历store的属性，判断如果属性值不是响应式的就给它包一层Ref，是响应式的就直接拿过来用，这样能确保每个属性值都是响应式的。</p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/blogs/blog/3.html#definestore-方法" class="sidebar-link reco-side-definestore-方法" data-v-b57cc07c>defineStore 方法</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/blog/3.html#_1、调用方式" class="sidebar-link reco-side-_1、调用方式" data-v-b57cc07c>1、调用方式</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/blog/3.html#_2、源码分析" class="sidebar-link reco-side-_2、源码分析" data-v-b57cc07c>2、源码分析</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/blog/3.html#storetorefs-方法" class="sidebar-link reco-side-storetorefs-方法" data-v-b57cc07c>storeToRefs 方法</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/blog/3.html#_1、调用方式-2" class="sidebar-link reco-side-_1、调用方式-2" data-v-b57cc07c>1、调用方式</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/blog/3.html#_2、源码分析-2" class="sidebar-link reco-side-_2、源码分析-2" data-v-b57cc07c>2、源码分析</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.afb0ad1b.js" defer></script><script src="/assets/js/3.56fde116.js" defer></script><script src="/assets/js/1.a6ea1bc9.js" defer></script><script src="/assets/js/14.d7ded7c5.js" defer></script>
+  </body>
+</html>
