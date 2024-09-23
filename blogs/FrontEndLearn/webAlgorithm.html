@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>图的最小生成树问题 | 汪元会的小窝</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="我的个人博客网站">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.eb5f38e4.css" as="style"><link rel="preload" href="/assets/js/app.b1b33532.js" as="script"><link rel="preload" href="/assets/js/3.70943461.js" as="script"><link rel="preload" href="/assets/js/1.a6ea1bc9.js" as="script"><link rel="preload" href="/assets/js/8.2aada837.js" as="script"><link rel="prefetch" href="/assets/js/10.c3c91f40.js"><link rel="prefetch" href="/assets/js/11.76ee781c.js"><link rel="prefetch" href="/assets/js/12.87a59e9b.js"><link rel="prefetch" href="/assets/js/13.436b0077.js"><link rel="prefetch" href="/assets/js/14.a0e13290.js"><link rel="prefetch" href="/assets/js/15.f1686214.js"><link rel="prefetch" href="/assets/js/16.4077d43f.js"><link rel="prefetch" href="/assets/js/17.fde66133.js"><link rel="prefetch" href="/assets/js/18.6f06fbbd.js"><link rel="prefetch" href="/assets/js/19.bdbe7d6b.js"><link rel="prefetch" href="/assets/js/20.8153c10f.js"><link rel="prefetch" href="/assets/js/21.c3b2bdc5.js"><link rel="prefetch" href="/assets/js/4.a3ba3a56.js"><link rel="prefetch" href="/assets/js/5.dc544916.js"><link rel="prefetch" href="/assets/js/6.002595b6.js"><link rel="prefetch" href="/assets/js/7.4c526d5f.js"><link rel="prefetch" href="/assets/js/9.2358af48.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.eb5f38e4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>汪元会的小窝</h3> <p class="description" data-v-59e6cb88>我的个人博客网站</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>汪元会</span>
+          
+        <span data-v-59e6cb88>2017 - </span>
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpg" alt="汪元会的小窝" class="logo"> <span class="site-name">汪元会的小窝</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端学习/" class="nav-link"><i class="undefined"></i>
+  前端学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/嗨喵沉淀/" class="nav-link"><i class="undefined"></i>
+  嗨喵沉淀
+</a></li><li class="dropdown-item"><!----> <a href="/categories/高数学习/" class="nav-link"><i class="undefined"></i>
+  高数学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔感悟/" class="nav-link"><i class="undefined"></i>
+  随笔感悟
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/huige9999" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/avatar.jpg" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    汪元会
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>9</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>5</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端学习/" class="nav-link"><i class="undefined"></i>
+  前端学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/嗨喵沉淀/" class="nav-link"><i class="undefined"></i>
+  嗨喵沉淀
+</a></li><li class="dropdown-item"><!----> <a href="/categories/高数学习/" class="nav-link"><i class="undefined"></i>
+  高数学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔感悟/" class="nav-link"><i class="undefined"></i>
+  随笔感悟
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/huige9999" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>图的最小生成树问题</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>汪元会</span>
+          
+        <span data-v-59e6cb88>2017 - </span>
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">图的最小生成树问题</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>汪元会</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>9/21/2024</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>前端算法</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="_1-什么是图的最小生成树问题"><a href="#_1-什么是图的最小生成树问题" class="header-anchor">#</a> 1. 什么是图的最小生成树问题？</h2> <p>拿村庄修路来举例子：希望所有的村庄都联通，所需要的最小花费是多少？
+<img src="/assets/img/webAlgorithm1.75b91f97.png" alt="村庄修路示意图"></p> <h3 id="图的最小生成树怎么理解"><a href="#图的最小生成树怎么理解" class="header-anchor">#</a> 图的最小生成树怎么理解？</h3> <ul><li>树是图的特殊情况(有向无环图)</li> <li>要想花费最少，就没必要每个村庄都各自直接联通(即：上图可以去掉一些边)</li></ul> <p><strong>问题转换为：如何对上图连线进行删减使得最终的花费最少？</strong> <img src="/assets/img/webAlgorithm2.786c5bba.png" alt="村庄修路示意图"></p> <h2 id="_2-为什么要解决图的最小生成树问题"><a href="#_2-为什么要解决图的最小生成树问题" class="header-anchor">#</a> 2. 为什么要解决图的最小生成树问题？</h2> <p>上图的节点如果特别多，靠人力就很难算出最小花费，所以需要算法来帮助我们计算。</p> <h2 id="_3-如何解决图的最小生成树问题"><a href="#_3-如何解决图的最小生成树问题" class="header-anchor">#</a> 3. 如何解决图的最小生成树问题?</h2> <ul><li>普利姆算法(加点法)</li> <li>克鲁斯卡尔算法(加边法)</li></ul> <h2 id="_4-普利姆算法的思路"><a href="#_4-普利姆算法的思路" class="header-anchor">#</a> 4. 普利姆算法的思路</h2> <p><img src="/assets/img/webAlgorithm3.fc59099e.png" alt="村庄修路示意图"></p> <ol><li>随便选一个点D作为起点，看D的连线哪个最便宜，就把它连上去。
+<img src="/assets/img/webAlgorithm4.4f5f562a.png" alt="村庄修路示意图"></li></ol> <p><img src="/assets/img/webAlgorithm5.6fa34d20.png" alt="村庄修路示意图"></p> <ol start="2"><li><p>再把C,D看成一个整体，再看哪个连线最便宜，就把它连上去。
+<img src="/assets/img/webAlgorithm6.81c255d1.png" alt="村庄修路示意图"></p></li> <li><p>再把B,C,D看成一个整体，再看哪个连线最便宜，就把它连上去。
+<img src="/assets/img/webAlgorithm7.9f0c280c.png" alt="村庄修路示意图"></p></li></ol> <p><img src="/assets/img/webAlgorithm8.1897c331.png" alt="村庄修路示意图"></p> <h3 id="_4-1-小结感悟"><a href="#_4-1-小结感悟" class="header-anchor">#</a> 4.1 小结感悟</h3> <ul><li>随便选一个点，以该点为起点找最便宜的连线</li> <li>已连接的多个点当成一个整体重复上面的过程，不过要注意的是：已经联通的点就不要再连了</li></ul> <h3 id="_4-2-算法描述"><a href="#_4-2-算法描述" class="header-anchor">#</a> 4.2 算法描述</h3> <ol><li>任选一个点作为起点</li> <li>找到以当前选中点为起点路径最短的边</li> <li>如果这个边的另一端没有被联通进来，那么就连起来!</li> <li>如果这个边的另一端已经被联通了,则看倒数第二短的边</li> <li>重复2-4步，直到所有点都被联通</li></ol> <h2 id="_5-普利姆算法的代码实现"><a href="#_5-普利姆算法的代码实现" class="header-anchor">#</a> 5. 普利姆算法的代码实现</h2> <h3 id="_5-1-图的表示方法"><a href="#_5-1-图的表示方法" class="header-anchor">#</a> 5.1 图的表示方法</h3> <p>两个要素：点集合、边集合
+<img src="/assets/img/webAlgorithm9.3a85081b.png" alt="村庄修路示意图"> <img src="/assets/img/webAlgorithm10.1dba047c.png" alt="村庄修路示意图"></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const max = 10000;
+const pointSet = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;];
+
+const distance = [
+  [0, 9, 7, max, max],
+  [9, 0, 8, 6, max],
+  [7, 8, 0, 5, max],
+  [max, 6, 5, 0, 7],
+  [max, max, max, 7, 0],
+];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="_5-2-代码实现"><a href="#_5-2-代码实现" class="header-anchor">#</a> 5.2 代码实现</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * 普利姆算法的实现
+ */
+
+const max = 10000;
+const pointSet = [];
+
+// 边集 记录点与点之间的距离
+const distance = [
+  [0, 9, 7, max, max],
+  [9, 0, 8, 6, max],
+  [7, 8, 0, 5, max],
+  [max, 6, 5, 0, 7],
+  [max, max, max, 7, 0],
+];
+
+/**
+ * 创建图的节点
+ */
+function Node(value) {
+    this.value = value;
+    this.neighbors = [];
+}
+
+// 创建点集中的节点
+const a = new Node(&quot;A&quot;);
+const b = new Node(&quot;B&quot;);
+const c = new Node(&quot;C&quot;);
+const d = new Node(&quot;D&quot;);
+const e = new Node(&quot;E&quot;);
+pointSet.push(a, b, c, d, e);
+
+
+/**
+ * 获取当前这个点在distance表格中的第几行
+ */
+function getIndex(str) {
+  for(let i = 0;i &lt; pointSet.length;i++) {
+    if(pointSet[i].value === str) {
+        return i
+    }
+  }
+  return -1;
+}
+
+
+/**
+ * 根据选中节点获取最小代价的边所连接的节点
+ * allPoints 点集
+ * distance 边集
+ * nowPointSet 当前已经选择的节点集合
+ */
+function getMinDisNode(pointSet, distance, nowPointSet) {
+   let fromNode = null; // 线段的起点
+   let toNode = null; // 线段的终点
+   let minDis = max; // 最小距离
+   // 根据选中的节点为起点，依次判断连接其他的点的距离的值是多少
+   for (let i = 0; i &lt; nowPointSet.length; i++) {
+     const nowPointIndex = getIndex(nowPointSet[i].value); // 当前点在disance表格中的第几行
+      for(let j = 0; j &lt; distance[nowPointIndex].length;j++) { // 遍历distance这一行的所有节点
+        const thisNode = pointSet[j];
+        if(nowPointSet.indexOf(thisNode) === -1 &amp;&amp; distance[nowPointIndex][j] &lt; minDis) {
+            // 进入此if说明当前点还没有被联通 并且距离是目前最短的
+            fromNode = nowPointSet[i];
+            toNode = thisNode;
+            minDis = distance[nowPointIndex][j];
+        }
+      }
+   }
+   // 最外层循环走完之后，会找到作为起点的节点组的最小距离的边对应的终点节点
+   // 连接节点
+   fromNode.neighbors.push(toNode);
+   toNode.neighbors.push(fromNode);
+   return toNode;
+}
+
+
+/**
+ * @param {*} pointSet 点集
+ * @param {*} distance 边集
+ * @param {*} start 起始点
+ */
+function prim(pointSet, distance, start) {
+  const nowPointSet = []; // 存放已经选择的节点
+  nowPointSet.push(start);
+  // 获取最小代码的边
+  while(true) {
+    const minDisNode = getMinDisNode(pointSet, distance, nowPointSet);
+    // 将获取到的最小距离点加入到节点组中
+    nowPointSet.push(minDisNode);
+    // 如果节点组的长度等于点集的长度，说明所有节点都已经被联通
+    if(nowPointSet.length === pointSet.length) {
+        break;
+    }
+  }
+}
+
+
+prim(pointSet, distance, pointSet[2]);
+
+console.log(pointSet);
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br></div></div><h3 id="_5-3-代码小结"><a href="#_5-3-代码小结" class="header-anchor">#</a> 5.3 代码小结</h3> <p><strong>主干函数:</strong></p> <p>参数：图和起始点
+<img src="/assets/img/webAlgorithm11.0ce1b68f.png" alt="图片"></p> <p>逻辑简化:</p> <ol><li>定义起始点组</li> <li>不断地找最小代价点加入起始点组，直到所有点都被联通(即：起始点组的长度等于点集的长度)</li></ol> <p><strong>难点：如何找到最小代价的点</strong></p> <p>参数：图、起始点组
+<img src="/assets/img/webAlgorithm12.29d96d60.png" alt="图片"></p> <p>逻辑简化：</p> <ul><li><p>被比较的对象：起始点组中的每一个点</p></li> <li><p>比较的对象：对应图中的点</p></li> <li><p>定义起始节点、终点节点、最小距离(用于记录每次比较的最优结果)</p></li> <li><p>双层for循环：遍历比较【起点组的每个点】和【对应图中的每个点】
+如果有最优解则更新最小距离、起始节点、终点节点</p></li> <li><p>最优解：两点的距离更新 &amp;&amp; 【比较对象的点】不在【被比较对象所在的点集】中</p></li></ul></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">9/22/2024, 11:49:31 AM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webAlgorithm.html#_1-什么是图的最小生成树问题" class="sidebar-link reco-side-_1-什么是图的最小生成树问题" data-v-b57cc07c>1. 什么是图的最小生成树问题？</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webAlgorithm.html#图的最小生成树怎么理解" class="sidebar-link reco-side-图的最小生成树怎么理解" data-v-b57cc07c>图的最小生成树怎么理解？</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webAlgorithm.html#_2-为什么要解决图的最小生成树问题" class="sidebar-link reco-side-_2-为什么要解决图的最小生成树问题" data-v-b57cc07c>2. 为什么要解决图的最小生成树问题？</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webAlgorithm.html#_3-如何解决图的最小生成树问题" class="sidebar-link reco-side-_3-如何解决图的最小生成树问题" data-v-b57cc07c>3. 如何解决图的最小生成树问题?</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webAlgorithm.html#_4-普利姆算法的思路" class="sidebar-link reco-side-_4-普利姆算法的思路" data-v-b57cc07c>4. 普利姆算法的思路</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webAlgorithm.html#_4-1-小结感悟" class="sidebar-link reco-side-_4-1-小结感悟" data-v-b57cc07c>4.1 小结感悟</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webAlgorithm.html#_4-2-算法描述" class="sidebar-link reco-side-_4-2-算法描述" data-v-b57cc07c>4.2 算法描述</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webAlgorithm.html#_5-普利姆算法的代码实现" class="sidebar-link reco-side-_5-普利姆算法的代码实现" data-v-b57cc07c>5. 普利姆算法的代码实现</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webAlgorithm.html#_5-1-图的表示方法" class="sidebar-link reco-side-_5-1-图的表示方法" data-v-b57cc07c>5.1 图的表示方法</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webAlgorithm.html#_5-2-代码实现" class="sidebar-link reco-side-_5-2-代码实现" data-v-b57cc07c>5.2 代码实现</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webAlgorithm.html#_5-3-代码小结" class="sidebar-link reco-side-_5-3-代码小结" data-v-b57cc07c>5.3 代码小结</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.b1b33532.js" defer></script><script src="/assets/js/3.70943461.js" defer></script><script src="/assets/js/1.a6ea1bc9.js" defer></script><script src="/assets/js/8.2aada837.js" defer></script>
+  </body>
+</html>
