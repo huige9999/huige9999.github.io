@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>汪元会的小窝</title>
+    <title>babel与编译器执行原理 | 汪元会的小窝</title>
     <meta name="generator" content="VuePress 1.9.7">
     <link rel="icon" href="/favicon.ico">
     <meta name="description" content="我的个人博客网站">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     
-    <link rel="preload" href="/assets/css/0.styles.eb5f38e4.css" as="style"><link rel="preload" href="/assets/js/app.e09f3263.js" as="script"><link rel="preload" href="/assets/js/3.0b2417a7.js" as="script"><link rel="preload" href="/assets/js/1.a0e15140.js" as="script"><link rel="preload" href="/assets/js/31.6c3ac915.js" as="script"><link rel="prefetch" href="/assets/js/10.585326a2.js"><link rel="prefetch" href="/assets/js/11.d20b0651.js"><link rel="prefetch" href="/assets/js/12.d64301dd.js"><link rel="prefetch" href="/assets/js/13.da3234a8.js"><link rel="prefetch" href="/assets/js/14.e51df23b.js"><link rel="prefetch" href="/assets/js/15.b33608e0.js"><link rel="prefetch" href="/assets/js/16.fcbc224e.js"><link rel="prefetch" href="/assets/js/17.650e37f3.js"><link rel="prefetch" href="/assets/js/18.00bc059c.js"><link rel="prefetch" href="/assets/js/19.ed1f3129.js"><link rel="prefetch" href="/assets/js/20.47af85f2.js"><link rel="prefetch" href="/assets/js/21.461e273b.js"><link rel="prefetch" href="/assets/js/22.b3b6cd92.js"><link rel="prefetch" href="/assets/js/23.cf96a756.js"><link rel="prefetch" href="/assets/js/24.976e5fed.js"><link rel="prefetch" href="/assets/js/25.4cb8b266.js"><link rel="prefetch" href="/assets/js/26.6e8dfa42.js"><link rel="prefetch" href="/assets/js/27.846c5547.js"><link rel="prefetch" href="/assets/js/28.380a66f2.js"><link rel="prefetch" href="/assets/js/29.2bd7cd2c.js"><link rel="prefetch" href="/assets/js/30.243d5dd4.js"><link rel="prefetch" href="/assets/js/32.8c4a1dfe.js"><link rel="prefetch" href="/assets/js/33.810d622a.js"><link rel="prefetch" href="/assets/js/4.ac4e552e.js"><link rel="prefetch" href="/assets/js/5.2b77e7fb.js"><link rel="prefetch" href="/assets/js/6.1d47aeab.js"><link rel="prefetch" href="/assets/js/7.579a8a01.js"><link rel="prefetch" href="/assets/js/8.104c3c5b.js"><link rel="prefetch" href="/assets/js/9.82845734.js">
+    <link rel="preload" href="/assets/css/0.styles.eb5f38e4.css" as="style"><link rel="preload" href="/assets/js/app.bb8aa78a.js" as="script"><link rel="preload" href="/assets/js/3.94024a8a.js" as="script"><link rel="preload" href="/assets/js/1.a0e15140.js" as="script"><link rel="preload" href="/assets/js/33.129088dd.js" as="script"><link rel="prefetch" href="/assets/js/10.3ebfdd75.js"><link rel="prefetch" href="/assets/js/11.105038be.js"><link rel="prefetch" href="/assets/js/12.ed62b8c4.js"><link rel="prefetch" href="/assets/js/13.32b491f7.js"><link rel="prefetch" href="/assets/js/14.85bf5c14.js"><link rel="prefetch" href="/assets/js/15.f18f7207.js"><link rel="prefetch" href="/assets/js/16.bc3bbdfb.js"><link rel="prefetch" href="/assets/js/17.d77bf660.js"><link rel="prefetch" href="/assets/js/18.66eb560d.js"><link rel="prefetch" href="/assets/js/19.41474a19.js"><link rel="prefetch" href="/assets/js/20.55525284.js"><link rel="prefetch" href="/assets/js/21.6f018ac2.js"><link rel="prefetch" href="/assets/js/22.6cda2f54.js"><link rel="prefetch" href="/assets/js/23.3d67389b.js"><link rel="prefetch" href="/assets/js/24.bf0f6daf.js"><link rel="prefetch" href="/assets/js/25.eec42630.js"><link rel="prefetch" href="/assets/js/26.7ed8de92.js"><link rel="prefetch" href="/assets/js/27.f72420d8.js"><link rel="prefetch" href="/assets/js/28.979021ca.js"><link rel="prefetch" href="/assets/js/29.ef34e671.js"><link rel="prefetch" href="/assets/js/30.9c83d186.js"><link rel="prefetch" href="/assets/js/31.dba1f559.js"><link rel="prefetch" href="/assets/js/32.6f28c437.js"><link rel="prefetch" href="/assets/js/34.66e4fe87.js"><link rel="prefetch" href="/assets/js/35.265ecae3.js"><link rel="prefetch" href="/assets/js/4.510b2011.js"><link rel="prefetch" href="/assets/js/5.82794736.js"><link rel="prefetch" href="/assets/js/6.d840df8d.js"><link rel="prefetch" href="/assets/js/7.845393a4.js"><link rel="prefetch" href="/assets/js/8.c8f1488e.js"><link rel="prefetch" href="/assets/js/9.c1efa612.js">
     <link rel="stylesheet" href="/assets/css/0.styles.eb5f38e4.css">
   </head>
   <body>
@@ -23,10 +23,10 @@
       分类
     </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端学习/" class="nav-link"><i class="undefined"></i>
   前端学习
-</a></li><li class="dropdown-item"><!----> <a href="/categories/高数学习/" class="nav-link"><i class="undefined"></i>
-  高数学习
 </a></li><li class="dropdown-item"><!----> <a href="/categories/嗨喵沉淀/" class="nav-link"><i class="undefined"></i>
   嗨喵沉淀
+</a></li><li class="dropdown-item"><!----> <a href="/categories/高数学习/" class="nav-link"><i class="undefined"></i>
+  高数学习
 </a></li><li class="dropdown-item"><!----> <a href="/categories/随笔感悟/" class="nav-link"><i class="undefined"></i>
   随笔感悟
 </a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
@@ -37,16 +37,16 @@
   Gitee
   <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/avatar.jpg" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
     汪元会
-  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>20</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>7</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>23</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>7</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
   首页
 </a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
       分类
     </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端学习/" class="nav-link"><i class="undefined"></i>
   前端学习
-</a></li><li class="dropdown-item"><!----> <a href="/categories/高数学习/" class="nav-link"><i class="undefined"></i>
-  高数学习
 </a></li><li class="dropdown-item"><!----> <a href="/categories/嗨喵沉淀/" class="nav-link"><i class="undefined"></i>
   嗨喵沉淀
+</a></li><li class="dropdown-item"><!----> <a href="/categories/高数学习/" class="nav-link"><i class="undefined"></i>
+  高数学习
 </a></li><li class="dropdown-item"><!----> <a href="/categories/随笔感悟/" class="nav-link"><i class="undefined"></i>
   随笔感悟
 </a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
@@ -55,11 +55,375 @@
       联系我
     </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/huige9999" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
   Gitee
-  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>汪元会</span>
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>babel与编译器执行原理</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>汪元会</span>
           
         <span data-v-59e6cb88>2017 - </span>
         2024
-      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title"></h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>汪元会</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">9/25/2024, 11:02:37 AM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:0;" data-v-b57cc07c data-v-7dd95ae2></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
-    <script src="/assets/js/app.e09f3263.js" defer></script><script src="/assets/js/3.0b2417a7.js" defer></script><script src="/assets/js/1.a0e15140.js" defer></script><script src="/assets/js/31.6c3ac915.js" defer></script>
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">babel与编译器执行原理</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>汪元会</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>10/30/2024</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>所见所闻</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="相关面试题"><a href="#相关面试题" class="header-anchor">#</a> 相关面试题</h2> <h3 id="babel是什么-它在javascript开发中的作用是什么"><a href="#babel是什么-它在javascript开发中的作用是什么" class="header-anchor">#</a> babel是什么,它在JavaScript开发中的作用是什么?</h3> <p>babel是一个JavaScript编译器,主要用于将现代JavaScript代码(包括ES6及更高版本的语法),转换为向后兼容的JavaScript代码,
+以确保在旧版本的浏览器或环境中也能运行,它的作用包括：</p> <ol><li>语法转换：将现代JavaScript语法(如箭头函数、类、模板字符串等)转换为ES5兼容的语法。</li> <li>Polyfills：通过使用工具如<code>@babel/polyfill</code>，可以为缺失的JavaScript功能(如:<code>Promise</code>、<code>Array.includes</code>等)添加兼容性支持。</li> <li>插件化架构: babel使用插件来扩展其功能,可以根据项目需求加载不同插件进行定制。</li> <li>代码优化和压缩: 虽然主要用于语法转换,babel也可以与其他工具(如Terser)集成,以优化和压缩代码。</li></ol> <h3 id="解释babel插件和预设的区别-并举例说明如何在项目中使用它们"><a href="#解释babel插件和预设的区别-并举例说明如何在项目中使用它们" class="header-anchor">#</a> 解释babel插件和预设的区别，并举例说明如何在项目中使用它们</h3> <p>插件和预设都用于配置babel的行为,但它们有不同的用途和方式。</p> <ul><li>插件(Plugins): 插件时babel的基本转换单元,负责特定的代码转换任务。例如,将箭头函数转换为普通函数的插件<code>@babel/plugin-transform-arrow-functions</code>。</li> <li>预设(Presets): 预设时多个插件的集合,用于简化配置。例如,<code>@babel/preset-env</code>预设包含了一系列插件,能够根据目标环境自动选择和加载所需要的插件,以实现ES6+到ES5的转换。</li></ul> <p><strong>使用示例</strong>
+在项目中,通常会创建一个<code>.babelrc</code>文件进行配置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+ 'presets': ['@babel/preset-env'],
+ 'plugins': ['@babel/plugin-transform-runtime']
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>这里,<code>@babel/preset-env</code>预设负责将现代JavaScript语法转换为兼容的版本,而<code>@babel/plugin-transform-runtime</code>插件提取babel的辅助函数到外部模块(而不是重复插入到每个模块中)，避免全局污染。</p> <h3 id="什么是抽象语法树-ast-它在babel中的作用是什么"><a href="#什么是抽象语法树-ast-它在babel中的作用是什么" class="header-anchor">#</a> 什么是抽象语法树(AST),它在babel中的作用是什么?</h3> <p>抽象语法树(AST)是源代码的抽象语法结构的树状表示,其中每个节点都代表源代码中的一种结构,在编译器和babel的工作流程中,AST扮演着重要的角色。</p> <p><strong>AST在babel中的作用</strong></p> <ol><li>代码解析(Parsing): Babel首先解析源代码,生成AST。解析器(如Babylon)将源代码转换为AST,这是源代码转换的第一步。</li> <li>代码转换(Transformation): Babel插件对AST进行遍历和修改,根据需要转换特定的语法结构。例如,箭头函数插件会找到AST中的箭头函数节点,并将其转换为普通函数节点。</li> <li>代码生成(Code Generation): 在完成所有转换后,Babel将修改后的AST转换回JavaScript代码。这一步通过生成器(如Babel生成器)实现的</li></ol> <h2 id="babel基础使用"><a href="#babel基础使用" class="header-anchor">#</a> babel基础使用</h2> <h3 id="基本代码转换"><a href="#基本代码转换" class="header-anchor">#</a> 基本代码转换</h3> <ol><li>安装依赖</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>@babel/cli、@babel/core、@babel/preset-env
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="2"><li>.babeirc配置文件添加预设</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+  &quot;presets&quot;: [&quot;@babel/preset-env&quot;]
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="3"><li>脚本命令</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>babel src -d dist
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="转换typescript代码"><a href="#转换typescript代码" class="header-anchor">#</a> 转换typescript代码</h3> <ol><li>添加typescript的预设</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+  &quot;presets&quot;: [&quot;@babel/preset-env&quot;, &quot;@babel/preset-typescript&quot;]
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="2"><li>脚本命令</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>babel src/index.ts -o dist/index.js
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="babel进阶"><a href="#babel进阶" class="header-anchor">#</a> babel进阶</h2> <h3 id="自定义babel插件"><a href="#自定义babel插件" class="header-anchor">#</a> 自定义babel插件</h3> <p>插件系统分为两大部分</p> <ul><li>插件底座</li> <li>插件协议</li></ul> <p><strong>理解：</strong></p> <ul><li>插件底座是个有核心功能的容器</li> <li>插件协议描述插件对象长啥样</li> <li>符合协议的插件对象可以放到容器里待插件对象去使用</li></ul> <h4 id="案例-caculator-插件系统"><a href="#案例-caculator-插件系统" class="header-anchor">#</a> 案例: Caculator(插件系统)</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+const CalcutatorInterceptors = {}
+
+class Caculator {
+    plugins = new Map();
+    constructor() {
+     // 计算逻辑的名称和计算逻辑的函数
+     // plugins = new Map();
+     // 约定一下插件的协议
+    /**
+     * {
+     *  name: 'add',
+     *  handler: function(a,b){return a+b}    
+     * }
+     */
+    }
+    // 注册插件的逻辑
+    use(plugin) {
+        this.plugins.set(plugin.name, plugin.handler);
+    }
+    // 执行插件的逻辑
+    invoke(name,...args) {
+        if(!this.plugins.has(name)) {
+            throw new Error(`plugin ${name} not found`);
+        }
+        // 前置处理
+        CalcutatorInterceptors.enter?.[name] &amp;&amp; CalcutatorInterceptors.enter[name](name,...args)
+        // 执行核心逻辑
+        const result = this.plugins.get(name)(...args);
+        // 后置处理
+        CalcutatorInterceptors.exit?.[name] &amp;&amp; CalcutatorInterceptors.exit[name](name, result,...args)
+        return result;
+    }
+
+}
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>// 所有权交给开发者(具体功能实现交给开发者)
+const addPlugin = {
+    name: 'add',
+    handler: function(a, b) {
+        return a + b;
+    }
+}
+const multiplyPlugin = {
+    name:'multiply',
+    handler: function(a, b) {
+        return a * b;
+    }
+}
+
+const caculator = new Caculator();
+
+// 对比Vue.use(Pinia)
+caculator.use(addPlugin);
+caculator.use(multiplyPlugin);
+
+// 面向切面，增强插件参数的功能
+CalcutatorInterceptors.enter = {
+    add: function(name,...args) {
+        console.log(`before invoke add`,...args);
+    }
+}
+console.log(caculator.invoke('add', 1, 2)); // 3
+
+// 面向切面，增强插件返回值的功能
+// 类比：axios.request.interceptors.use((config)=&gt;{})
+CalcutatorInterceptors.exit = {
+    add: function(name, result,...args) {
+        console.log(`after invoke add`, result,...args);
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><h4 id="案例-箭头函数转换的插件封装"><a href="#案例-箭头函数转换的插件封装" class="header-anchor">#</a> 案例：箭头函数转换的插件封装</h4> <p>需求：将箭头函数转换为普通函数</p> <ol><li>自定义一个插件并引入</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>/plugins/arrow-functions.js
+
+babelrc配置文件:
+{
+  &quot;plugins&quot;: [&quot;./plugins/arrow-functions&quot;]
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="2"><li>编写插件代码</li></ol> <p>babel插件的协议：</p> <ol><li>是一个函数</li> <li>函数返回一个对象</li> <li>对象有一个visitor属性</li> <li>visitor属性的key式babel ast节点类型，比如ArrowFunctionExpression</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = function() {
+    return {
+        visitor: {
+            VariableDeclaration(path) {
+                // 将const变量声明转换为var变量声明
+                if (path.node.kind === 'const') {
+                    path.node.kind = 'var';
+                }
+            },
+            ArrowFunctionExpression(path) {
+
+            }
+        }
+    }
+}
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>具体的转换逻辑可以借助babel的一些库来辅助
+<strong>方法1：使用types辅助修改</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const { types: t } = require('@babel/core');
+
+visitor: {
+    arrowFunctionExpression(path) {
+        const { node } = path;
+
+        const functionExpression = t.functionExpression(null, node.params, node.body, node.generator);
+        // 处理箭头函数没有函数体的情况
+        if(t.isBlockStatement(node.body)) {
+            functionExpression.body = t.blockStatement([t.returnStatement(node.body)])
+        }
+        // 替换箭头函数
+        path.replaceWith(functionExpression);
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p><strong>方法2：使用@babel/helper-plugin-utils辅助修改</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// declare 是一个辅助工具，可以确保插件在合适的 Babel API 环境中运行，并为插件注入 Babel 的 API。
+const { declare } = require('@babel/helper-plugin-utils');
+
+module.exports = declare((api, options) =&gt; {
+    // 用来确定是否需要强制遵循箭头函数的语法规范。
+   const noNewArrows = api.assumption('noNewArrows') ?? !options.spec;
+
+    return {
+        name: 'transform-arrow-functions',
+        visitor: {
+            ArrowFunctionExpression(path) {
+                // 如果当前节点不是箭头函数表达式，则直接返回。
+               if(!path.isArrowFunctionExpression()) return;
+               // 将箭头函数转换为普通函数表达式，传入的参数用于配置转换细节。
+               path.arrowFunctionToExpression({
+                allowInsertArrow: false,
+                noNewArrows,
+                specCompliant: !noNewArrows
+               });
+            }
+        }
+    }
+});
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h3 id="babel编译过程"><a href="#babel编译过程" class="header-anchor">#</a> babel编译过程</h3> <p>转换型编译器的执行流程</p> <ul><li>tokenizer: 词法分析，将代码分割成一个个token</li> <li>parser: 语法分析，将token转换成AST</li> <li>transformer: 转换器，对AST进行转换，比如将箭头函数转换为普通函数</li> <li>generator: 代码生成器，将AST转换成代码</li></ul> <p>需求：将源代码const转换为var</p> <ol><li>安装依赖</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>@babel/core、@babel/parser、@babel/traverse、@babel/generator
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="2"><li>编写compiler代码</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 解析成ast
+const parser = require('@babel/parser');
+
+// 遍历
+const traverse = require('@babel/traverse').default;
+
+// 生成代码
+const generator = require('@babel/generator').default;
+
+const sourceCode = `const a = 1`;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>// 1. 将源代码解析成ast
+const ast = parser.parse(sourceCode);
+
+// 2. 遍历AST,将AST中的某些节点，修改为我们想要的内容 const =&gt; var
+// 第一种方式：访问者模式
+const visitor = {
+    VariableDeclaration(path) {
+        // 将const变量声明转换为var变量声明
+        if (path.node.kind === 'const') {
+            path.node.kind = 'var';
+        }
+    }
+}
+
+const newAst = traverse(ast, visitor);
+
+// 第二种方式：状态机
+const visitor2 = {
+    enter(path) {
+        if (path.node.kind === 'const') {
+            path.node.kind = 'var';
+        }
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>// 3. ast转换成代码
+const newCode = generator(newAst, {}, sourceCode).code;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><img src="image/image.png" alt="alt text"></p> <h2 id="编译原理"><a href="#编译原理" class="header-anchor">#</a> 编译原理</h2> <p><img src="image/image-1.png" alt="alt text"></p> <ul><li>词法分析：将代码转换成单词流，称为&quot;词法单元&quot;(tokens)，每个词法单元包含一个标识符和一个属性值，比如变量名、数字、操作符等等
+词法分析生成token的方法有2种：1. 正则表达式；2. 状态机</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[const, a, =, 1]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>语法分析： 将词法单元流转换成抽象语法树(AST)，也就是标记所构成的数据结构，表示源代码的结构和规则</li> <li>语义分析： 在AST上执行类型检查，作用域检查等操作，确保代码的正确性</li> <li>代码生成： 基于AST生成目标代码,包括优化代码结构、生成代码文本、进行代码压缩等。</li></ul> <h3 id="案例-公式编译执行器"><a href="#案例-公式编译执行器" class="header-anchor">#</a> 案例：公式编译执行器</h3> <p>需求：转换执行如何下公式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Add(1,MINUS(2,3))
+Subtract(Add(3,Multiply(4,2)),Divide(6,2))
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>// 1. tokens
+// 2. ast parser
+// 3. interpreter
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>// 1. token定义
+// 用于提取公式中的函数名
+const FN_NAME_TOKEN = /[a-zA-Z]/
+// 用于提取数字
+const NUMBER_TOKEN = /\d/
+// 用于提取左括号
+const LEFT_PAREN_TOKEN = /\(/
+// 用于提取右括号
+const RIGHT_PAREN_TOKEN = /\)/
+// 用于提取“,”
+const COMMA_TOKEN = /,/
+
+// 2. tokenizer
+function tokenizer(code) {
+    const tokens = [];
+    let current = 0; // 当前指针
+    while (current &lt; code.length) {
+        let char = code[current];
+
+        // 先匹配数字
+        if (NUMBER_TOKEN.test(char)) {
+            // 贪婪匹配数字
+            let value = '';
+            while (NUMBER_TOKEN.test(char)) {
+                value += char; // 当前字符存起来
+                current++; // 指针后移
+                char = code[current]; // 取下一个字符
+            }
+            // 将匹配到的数字token加入到tokens中
+            tokens.push({ type: 'number', value: parseInt(value) });
+            continue;
+        }
+
+        // 再匹配函数名
+        if(FN_NAME_TOKEN.test(char)) {
+            let value = '';
+            // 贪婪匹配函数名
+            while (FN_NAME_TOKEN.test(char)) {
+                value += char; // 当前字符存起来
+                current++; // 指针后移
+                char = code[current]; // 取下一个字符
+            }
+            // 将匹配到的函数名token加入到tokens中
+            tokens.push({ type: 'function', value });
+            continue;
+        }
+
+        // 匹配括号和逗号
+        if(LEFT_PAREN_TOKEN.test(char) || RIGHT_PAREN_TOKEN.test(char) || COMMA_TOKEN.test(char)) {
+            tokens.push({
+                type: char,
+                value: char
+            })
+            current++; // 指针后移
+            continue;
+        }
+
+        // 处理空格
+        if(char === &quot; &quot;) {
+            current++; // 指针后移
+            continue;
+        }
+
+        // 其他情况则抛出异常
+        throw new TypeError('I dont know what this charactor is:'+ char);
+
+
+
+        current++; // 指针后移
+    }
+
+
+    return tokens;
+}
+
+const tokens = tokenizer('Add(1,MINUS(2,3))');
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>// 3.parser
+function parser(tokens) {
+
+    function traverse() {
+        let token = tokens[current];
+
+        // 处理数字
+        if(token.type === 'number') {
+            current++;
+            return {
+                type: 'NumberLiteral',
+                value: token.value
+            }
+        }
+
+        // 处理函数
+        if(token.type === 'function') {
+            current++;
+            // 处理基础节点
+            let node = {
+                type: 'CallExpression',
+                name: token.value,
+                params: []
+            }
+            // 处理函数参数
+            token = tokens[current];
+            // 匹配&quot;(&quot;
+            while(LEFT_PAREN_TOKEN.test(token.value) || COMMA_TOKEN.test(token.value)) {
+                node.params.push(traverse());
+                token = tokens[current];
+                // 如果匹配到的是&quot;,&quot;则继续循环
+                if(COMMA_TOKEN.test(token.value)) {
+                    current++; // 跳过逗号
+                }
+            }
+            current++; // 跳过&quot;)&quot;
+            return node;
+        }
+
+
+    }
+
+    // 基础的AST结构
+     let ast = {
+        type: 'program',
+        body: []
+     }
+
+     let current = 0; // 当前指针
+
+     // 一个一个提取处理token
+     while(current &lt; tokens.length) {
+        const body = traverse();
+        body &amp;&amp; ast.body.push(body);
+     }
+     
+
+    return ast;
+}
+
+
+const ast = parser(tokens);
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>// 4.interpreter
+// 后续遍历ast完成计算
+function interpreter(ast) {
+   const operators = {
+      Add: (a,b) =&gt; a + b,
+      Subtract: (a,b) =&gt; a - b,
+      Multiply: (a,b) =&gt; a * b,
+      Divide: (a,b) =&gt; a / b,
+   }
+
+    function traverse(node) {
+        switch(node.type) {
+            case 'NumberLiteral':
+                return node.value
+            case 'CallExpression':
+                const args = node.params.map(traverse);
+                const operator = operators[node.name];
+                return operator(...args);
+        }
+    }
+
+    return traverse(ast.body[0]);
+}
+
+interpreter(ast);
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">10/30/2024, 7:33:50 PM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/blogs/Thoughts/aboutBabel.html#相关面试题" class="sidebar-link reco-side-相关面试题" data-v-b57cc07c>相关面试题</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/Thoughts/aboutBabel.html#babel是什么-它在javascript开发中的作用是什么" class="sidebar-link reco-side-babel是什么-它在javascript开发中的作用是什么" data-v-b57cc07c>babel是什么,它在JavaScript开发中的作用是什么?</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/Thoughts/aboutBabel.html#解释babel插件和预设的区别-并举例说明如何在项目中使用它们" class="sidebar-link reco-side-解释babel插件和预设的区别-并举例说明如何在项目中使用它们" data-v-b57cc07c>解释babel插件和预设的区别，并举例说明如何在项目中使用它们</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/Thoughts/aboutBabel.html#什么是抽象语法树-ast-它在babel中的作用是什么" class="sidebar-link reco-side-什么是抽象语法树-ast-它在babel中的作用是什么" data-v-b57cc07c>什么是抽象语法树(AST),它在babel中的作用是什么?</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/Thoughts/aboutBabel.html#babel基础使用" class="sidebar-link reco-side-babel基础使用" data-v-b57cc07c>babel基础使用</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/Thoughts/aboutBabel.html#基本代码转换" class="sidebar-link reco-side-基本代码转换" data-v-b57cc07c>基本代码转换</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/Thoughts/aboutBabel.html#转换typescript代码" class="sidebar-link reco-side-转换typescript代码" data-v-b57cc07c>转换typescript代码</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/Thoughts/aboutBabel.html#babel进阶" class="sidebar-link reco-side-babel进阶" data-v-b57cc07c>babel进阶</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/Thoughts/aboutBabel.html#自定义babel插件" class="sidebar-link reco-side-自定义babel插件" data-v-b57cc07c>自定义babel插件</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/Thoughts/aboutBabel.html#babel编译过程" class="sidebar-link reco-side-babel编译过程" data-v-b57cc07c>babel编译过程</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/Thoughts/aboutBabel.html#编译原理" class="sidebar-link reco-side-编译原理" data-v-b57cc07c>编译原理</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/Thoughts/aboutBabel.html#案例-公式编译执行器" class="sidebar-link reco-side-案例-公式编译执行器" data-v-b57cc07c>案例：公式编译执行器</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.bb8aa78a.js" defer></script><script src="/assets/js/3.94024a8a.js" defer></script><script src="/assets/js/1.a0e15140.js" defer></script><script src="/assets/js/33.129088dd.js" defer></script>
   </body>
 </html>
