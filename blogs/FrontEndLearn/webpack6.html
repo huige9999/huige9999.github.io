@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>webpack的补充和案例 | 汪元会的小窝</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="我的个人博客网站">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.eb5f38e4.css" as="style"><link rel="preload" href="/assets/js/app.30be4d10.js" as="script"><link rel="preload" href="/assets/js/3.94024a8a.js" as="script"><link rel="preload" href="/assets/js/1.a0e15140.js" as="script"><link rel="preload" href="/assets/js/32.c8d74828.js" as="script"><link rel="prefetch" href="/assets/js/10.44422b12.js"><link rel="prefetch" href="/assets/js/11.e2884594.js"><link rel="prefetch" href="/assets/js/12.ed62b8c4.js"><link rel="prefetch" href="/assets/js/13.04fc7dbe.js"><link rel="prefetch" href="/assets/js/14.b33fc362.js"><link rel="prefetch" href="/assets/js/15.8086a007.js"><link rel="prefetch" href="/assets/js/16.d6c662e6.js"><link rel="prefetch" href="/assets/js/17.5f625afc.js"><link rel="prefetch" href="/assets/js/18.f9fd87ec.js"><link rel="prefetch" href="/assets/js/19.704efcd0.js"><link rel="prefetch" href="/assets/js/20.3d8be1b0.js"><link rel="prefetch" href="/assets/js/21.c6b4a5f0.js"><link rel="prefetch" href="/assets/js/22.5c6bdc9d.js"><link rel="prefetch" href="/assets/js/23.3d67389b.js"><link rel="prefetch" href="/assets/js/24.8a325fd7.js"><link rel="prefetch" href="/assets/js/25.b1db8f83.js"><link rel="prefetch" href="/assets/js/26.a4aedf3e.js"><link rel="prefetch" href="/assets/js/27.eb8bd30e.js"><link rel="prefetch" href="/assets/js/28.359b6459.js"><link rel="prefetch" href="/assets/js/29.5f34f4f0.js"><link rel="prefetch" href="/assets/js/30.2a1f9d11.js"><link rel="prefetch" href="/assets/js/31.bd4b87c4.js"><link rel="prefetch" href="/assets/js/33.ecb358aa.js"><link rel="prefetch" href="/assets/js/34.50f77641.js"><link rel="prefetch" href="/assets/js/35.43b12503.js"><link rel="prefetch" href="/assets/js/36.c6c38fc0.js"><link rel="prefetch" href="/assets/js/37.9aaeb849.js"><link rel="prefetch" href="/assets/js/38.5111d6b8.js"><link rel="prefetch" href="/assets/js/4.741c1ee8.js"><link rel="prefetch" href="/assets/js/5.82794736.js"><link rel="prefetch" href="/assets/js/6.d840df8d.js"><link rel="prefetch" href="/assets/js/7.845393a4.js"><link rel="prefetch" href="/assets/js/8.71d740f3.js"><link rel="prefetch" href="/assets/js/9.c1efa612.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.eb5f38e4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>汪元会的小窝</h3> <p class="description" data-v-59e6cb88>我的个人博客网站</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>汪元会</span>
+          
+        <span data-v-59e6cb88>2017 - </span>
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpg" alt="汪元会的小窝" class="logo"> <span class="site-name">汪元会的小窝</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端学习/" class="nav-link"><i class="undefined"></i>
+  前端学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/嗨喵沉淀/" class="nav-link"><i class="undefined"></i>
+  嗨喵沉淀
+</a></li><li class="dropdown-item"><!----> <a href="/categories/高数学习/" class="nav-link"><i class="undefined"></i>
+  高数学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔感悟/" class="nav-link"><i class="undefined"></i>
+  随笔感悟
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/huige9999" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/avatar.jpg" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    汪元会
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>26</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>8</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端学习/" class="nav-link"><i class="undefined"></i>
+  前端学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/嗨喵沉淀/" class="nav-link"><i class="undefined"></i>
+  嗨喵沉淀
+</a></li><li class="dropdown-item"><!----> <a href="/categories/高数学习/" class="nav-link"><i class="undefined"></i>
+  高数学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔感悟/" class="nav-link"><i class="undefined"></i>
+  随笔感悟
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/huige9999" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>webpack的补充和案例</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>汪元会</span>
+          
+        <span data-v-59e6cb88>2017 - </span>
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">webpack的补充和案例</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>汪元会</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>11/1/2024</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>webpack</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="不确定的动态依赖"><a href="#不确定的动态依赖" class="header-anchor">#</a> 不确定的动态依赖</h2> <h3 id="存在的问题"><a href="#存在的问题" class="header-anchor">#</a> 存在的问题</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>const module = document.getElementById(&quot;txt&quot;).value;
+const a = require(&quot;./utils/&quot; + module); // 动态依赖
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>像这种需要靠用户输入之后才能确定的依赖，webpack 的处理方式是：将 utils 文件夹下的所有文件都打包进来</p> <h3 id="解决方案"><a href="#解决方案" class="header-anchor">#</a> 解决方案</h3> <p>确定一个范围，让 webpack 只打包这个范围内的文件。</p> <p>其实<code>require(&quot;./utils/&quot; + module)</code>会被转换成<code>require.context('./utils')</code>(仅在 webpack 运行过程中有效)</p> <h4 id="require-context"><a href="#require-context" class="header-anchor">#</a> require.context</h4> <ul><li>参数 1：目录，哪个目录中的模块需要添加到打包结果</li> <li>参数 2：是否递归寻找子目录，如果为 true，表示需要寻找子目录</li> <li>参数 3：正则表达式，凡是匹配的才会加入到打包结果</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 生成一个上下文
+const context = require.context(&quot;./utils&quot;, true, /\.js$/);
+// 在这个上下文中查看a模块
+const a = context('./a.js')
+// 返回上下文中的所有模块
+context.keys();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="案例导出当前目录中的所有模块"><a href="#案例导出当前目录中的所有模块" class="header-anchor">#</a> 案例导出当前目录中的所有模块</h3> <p>目录结构为：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>utils/index.js(入口文件)
+utils/a.js
+utils/b.js
+utils/c.js
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>// utils/index.js:
+
+const context = require.context(&quot;./&quot;,true,/\.js$/);
+for(const key of context.keys()){
+  if(key !== &quot;./index.js&quot;) {
+    const filename = key.substr(2);
+    exports[filename] = context(key)
+  }
+}
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="搭建多页应用"><a href="#搭建多页应用" class="header-anchor">#</a> 搭建多页应用</h2> <p>适用于传统的前端开发</p> <h3 id="场景"><a href="#场景" class="header-anchor">#</a> 场景</h3> <ul><li>你正在开发一些纯粹的静态页面，页面中有少量的 ajax。比如活动促销页面、抽奖页面等。</li> <li>你正在开发一些 JS 功能，这些代码主要用于制作页面上的一些动态效果，比如 jquery 实现轮播图、分页等</li> <li>其他不使用前端框架的工程</li></ul> <h3 id="配置细节"><a href="#配置细节" class="header-anchor">#</a> 配置细节</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>融合配置，若属性冲突则后面的覆盖前面的
+merge(基础配置,dev/prod环境配置)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>页面结构：
+
+pages/index/(首页)
+  index.html(页面模板)
+  index.js(入口js)
+  index.css(样式文件)
+
+pages/common/header/(公共模块)
+  index.html
+  index.js
+  index.css
+
+通过HTMLWepbackPlugin插件使用index.html作为模板将js引入，而js中引入了css
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>pages/index/index.html:
+
+&lt;!-- 引入公共页头 --&gt;
+   &lt;%= require(&quot;html-loader!../common/header/index.html&quot;) %&gt;
+   &lt;div class=&quot;main-container&quot;&gt;首页&lt;/div&gt;
+   &lt;!-- 引入公共页尾 --&gt;
+   &lt;%= require(&quot;html-loader!../common/footer/index.html&quot;) %&gt;
+
+   loader内联加载
+   将首尾的html文件内容通过html-loader插入到对应的位置
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="搭建-vue-应用"><a href="#搭建-vue-应用" class="header-anchor">#</a> 搭建 Vue 应用</h2> <h3 id="配置细节-2"><a href="#配置细节-2" class="header-anchor">#</a> 配置细节</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 使用了babel-loader
+ { test: /\.js$/, use: &quot;babel-loader&quot; },
+
+// babel使用了vue预设,专门用来编译Vue代码
+babel.config.js:
+  module.exports = {
+    presets: [&quot;vue&quot;],
+};
+
+
+// 使用vue-loader专门用来编译.vue文件
+    {
+        test: /\.vue$/,
+        use: &quot;vue-loader&quot;,
+      },
+
+vue-loader核心使用了vue-template-compiler,它内部还会依赖file-loader、url-loader等其他loader
+
+
+// 加一个VueLoaderPlugin用来对整个打包流程进行控制
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p><strong>核心：使用了vue-loader和VueLoaderPlugin</strong></p> <h2 id="搭建-node-应用"><a href="#搭建-node-应用" class="header-anchor">#</a> 搭建 Node 应用</h2> <h3 id="node开发流程"><a href="#node开发流程" class="header-anchor">#</a> Node开发流程</h3> <p><strong>流程1：直接开发，直接部署</strong></p> <ol><li>搭建 node 工程，直接开发</li> <li>开发过程中使用 git 进行管理</li> <li>开发完成后，提交 git</li> <li>进入部署服务器，从 git 中拉取最新代码，然后<code>npm install</code> (服务器和开发环境的工程结构是一样的)</li></ol> <p>存在的问题：</p> <ol><li>服务器在<code>npm install</code>的过程中，会占用比较大的网络资源</li> <li>代码没有压缩，拉取速度较慢</li> <li>开发过程中，无法使用较新的语法</li> <li>开发过程中，无法使用 ES6 模块化</li></ol> <p><strong>流程2：直接开发，用 webpack 打包，然后部署</strong></p> <ol><li>搭建 node + webpack 工程</li> <li>开发后，使用 webpack 打包</li> <li>将打包结果上传到服务器，服务器直接运行</li></ol> <p>生产环境的运行：</p> <ol><li>监控源代码目录，如果源代码有变动</li> <li>将环境变量设置为<code>development</code>，然后进行打包</li> <li>运行打包结果</li></ol> <h3 id="配置细节-3"><a href="#配置细节-3" class="header-anchor">#</a> 配置细节</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 设置跨平台环境变量然后打包
+ &quot;build&quot;: &quot;cross-env NODE_ENV=production webpack&quot;
+
+// 监控源代码目录，如果代码有变化则执行构建，然后运行dist目录下的代码(保证和生产环境运行的代码一致)
+ &quot;dev&quot;: &quot;nodemon --watch src --exec 'npm run dev:build &amp;&amp; npm run dev:exec'&quot;,
+ &quot;dev:build&quot;: &quot;cross-env NODE_ENV=development webpack&quot;,
+ &quot;dev:exec&quot;: &quot;node dist/index&quot;,
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>webpack.config.js:
+
+target: &quot;node&quot;, // 指定打包的目标环境为node 默认为web
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="搭建全栈应用"><a href="#搭建全栈应用" class="header-anchor">#</a> 搭建全栈应用</h2> <p>比如：使用vue开发前端，express开发后端，将这两者结合起来就是全栈应用。</p> <h3 id="目录结构"><a href="#目录结构" class="header-anchor">#</a> 目录结构</h3> <p>源代码：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>client目录：
+   利用脚手架或者自己用webpack搭建的前端项目
+
+server目录：
+   纯node代码
+
+common目录：
+   存放一些公共代码，比如lodash、moment等
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>client、server有各自的node_modules,外层还有个node_modules</p> <p>打包后的dist:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>  dist目录：
+    public目录：存放客户端的代码
+    index.js： 服务端代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="配置细节-4"><a href="#配置细节-4" class="header-anchor">#</a> 配置细节</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>webpack.config.js:
+// 入口是服务端的Js(客户端打包的只是静态资源是依附于服务端的)
+  entry: &quot;./server/index.js&quot;,
+  target: &quot;node&quot;, // 指定打包的目标环境为node 默认为web
+  node: false, // 关闭wepback对node的模拟行为
+
+
+vue.config.js:
+module.exports = {
+  outputDir: &quot;../dist/public&quot;,
+};
+// 再对客户端进行打包，将打包结果放入dist/public目录下
+
+
+package.json: // 合并命令 npm-run-all可以运行多个命令 -s 串行执行
+ &quot;build&quot;: &quot;npm-run-all -s build:server build:client&quot;,
+ &quot;build:server&quot;: &quot;cross-env NODE_ENV=production webpack&quot;,
+ &quot;build:client&quot;: &quot;cd client &amp;&amp; npm run build&quot;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">11/6/2024, 12:58:19 PM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#不确定的动态依赖" class="sidebar-link reco-side-不确定的动态依赖" data-v-b57cc07c>不确定的动态依赖</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#存在的问题" class="sidebar-link reco-side-存在的问题" data-v-b57cc07c>存在的问题</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#解决方案" class="sidebar-link reco-side-解决方案" data-v-b57cc07c>解决方案</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#案例导出当前目录中的所有模块" class="sidebar-link reco-side-案例导出当前目录中的所有模块" data-v-b57cc07c>案例导出当前目录中的所有模块</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#搭建多页应用" class="sidebar-link reco-side-搭建多页应用" data-v-b57cc07c>搭建多页应用</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#场景" class="sidebar-link reco-side-场景" data-v-b57cc07c>场景</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#配置细节" class="sidebar-link reco-side-配置细节" data-v-b57cc07c>配置细节</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#搭建-vue-应用" class="sidebar-link reco-side-搭建-vue-应用" data-v-b57cc07c>搭建 Vue 应用</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#配置细节-2" class="sidebar-link reco-side-配置细节-2" data-v-b57cc07c>配置细节</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#搭建-node-应用" class="sidebar-link reco-side-搭建-node-应用" data-v-b57cc07c>搭建 Node 应用</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#node开发流程" class="sidebar-link reco-side-node开发流程" data-v-b57cc07c>Node开发流程</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#配置细节-3" class="sidebar-link reco-side-配置细节-3" data-v-b57cc07c>配置细节</a></li><li class="level-2" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#搭建全栈应用" class="sidebar-link reco-side-搭建全栈应用" data-v-b57cc07c>搭建全栈应用</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#目录结构" class="sidebar-link reco-side-目录结构" data-v-b57cc07c>目录结构</a></li><li class="level-3" data-v-b57cc07c><a href="/blogs/FrontEndLearn/webpack6.html#配置细节-4" class="sidebar-link reco-side-配置细节-4" data-v-b57cc07c>配置细节</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.30be4d10.js" defer></script><script src="/assets/js/3.94024a8a.js" defer></script><script src="/assets/js/1.a0e15140.js" defer></script><script src="/assets/js/32.c8d74828.js" defer></script>
+  </body>
+</html>
